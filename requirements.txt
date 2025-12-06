@@ -20,5 +20,7 @@ python-multipart==0.0.20
 ipykernel==7.1.0
 jupyter==1.1.1
 langchain-qdrant==1.1.0
-structlog
-langchain-google-genai
+structlog==25.5.0
+langchain-google-genai==3.2.0
+
+-e .

@@ -1,17 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "semantic-image-search"
+name = "semantic_image_search"
 version = "0.1.0"
-description = "Add your description here"
+description = "Semantic Image Search Engine"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []   # you can keep it empty; runtime deps are in requirements.txt
 
-[tool.setuptools]
-# Explicitly list the package(s) that should be installed
-packages = ["semantic_image_search"]
+dependencies = [
+    "fastapi==0.121.3",
+    "uvicorn==0.38.0",
+    "streamlit==1.51.0",
+    "coloredlogs==15.0.1",
+    "pydantic==2.12.4",
+    "langchain_core==1.1.0",
+    "langchain_community==0.4.1",
+    "ipython==9.7.0",
+    "requests==2.32.5",
+    "langchain_openai==1.0.3",
+    "langchain_experimental==0.4.0",
+    "pillow==12.0.0",
+    "langchain-huggingface==1.0.1",
+    "huggingface_hub==0.36.0",
+    "python-dotenv==1.2.1",
+    "langchain-astradb==0.6.0",
+    "open_clip_torch==3.2.0",
+    "torch==2.9.1",
+    "python-multipart==0.0.20",
+    "ipykernel==7.1.0",
+    "jupyter==1.1.1",
+    "langchain-qdrant==1.1.0",
+    "structlog==25.5.0",
+    "langchain-google-genai==3.2.0"
+]
 
-# Exclude the non‑code directories so they aren’t treated as packages
-exclude = ["logs", "images"]
+authors = [
+    { name = "Srinivasa Rao Palakaluri" }
+]
 
-# Include any package‑data (e.g., static files) if needed
-include-package-data = true
+license = { text = "Proprietary" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["semantic_image_search*"]
