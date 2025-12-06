@@ -4,4 +4,14 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = []   # you can keep it empty; runtime deps are in requirements.txt
+
+[tool.setuptools]
+# Explicitly list the package(s) that should be installed
+packages = ["semantic_image_search"]
+
+# Exclude the non‑code directories so they aren’t treated as packages
+exclude = ["logs", "images"]
+
+# Include any package‑data (e.g., static files) if needed
+include-package-data = true
